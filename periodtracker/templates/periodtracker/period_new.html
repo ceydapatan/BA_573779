@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Periode eintragen</title>
+</head>
+<body>
+<form method="POST">
+        <h2>New Period</h2>
+        <table>
+            {{ form }}
+        </table>
+        <button type="submit">Save</button>
+        {% csrf_token %}
+    </form>
+</body>
+</html>
