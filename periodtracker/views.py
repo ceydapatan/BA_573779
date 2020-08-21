@@ -39,7 +39,8 @@ def period_edit(request,pk):
 
 
 def period_delete(request,pk):
-    pk= pk-1
-    Period.objects.filter(pk__gt=pk).delete()
+    pk= pk
+    b = Period.objects.get(pk=pk)
+    b.delete()
     return redirect('period_list')
 

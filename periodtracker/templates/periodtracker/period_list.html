@@ -3,12 +3,17 @@
     {% for period in periods %}
         <div class="post">
             <div class="date">
-                {{ period.starting_date }}
-            </div>
 
+            </div>
+            <b>{{ "Beginn der Periode"}}</b>
+            <p>{{ period.starting_date }}</p>
+            <b>{{ "Stimmung"}}</b>
             <p>{{ period.mood|linebreaksbr}}</p>
+            <b>{{ "Kommentar"}}</b>
             <p>{{ period.comment|linebreaksbr}}</p>
+            <b>{{ "Schmerzen"}}</b>
             <p>{{ period.pain|linebreaksbr}}</p>
+            <b>{{ "Ende der Periode"}}</b>
             <p>{{ period.ending_date|linebreaksbr}}</p>
 
 
