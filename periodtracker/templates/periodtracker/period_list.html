@@ -9,17 +9,19 @@
             <p>{{ period.mood|linebreaksbr}}</p>
             <p>{{ period.comment|linebreaksbr}}</p>
             <p>{{ period.pain|linebreaksbr}}</p>
+            <p>{{ period.ending_date|linebreaksbr}}</p>
+
 
 
             <div>
                 <button>
-                        <a href="period_new">löschen</a>
+                        <a href="period/new">löschen</a>
                 </button>
             </div>
 
             <div>
                 <button>
-                        <a href="period_new">Ende der Periode eintragen</a>
+                        <a href="period/<int:pk>/edit">Ende der Periode eintragen</a>
                 </button>
             </div>
 
