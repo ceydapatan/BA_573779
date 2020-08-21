@@ -14,15 +14,13 @@
 
 
             <div>
-                <button>
-                        <a href="period/new">löschen</a>
-                </button>
+                  <a class="btn btn-default" href="{% url 'period_delete' pk=period.pk %}">löschen</a>
             </div>
 
             <div>
-                <button>
-                        <a href="period/<int:pk>/edit">Ende der Periode eintragen</a>
-                </button>
+
+                <a class="btn btn-default" href="{% url 'period_edit' pk=period.pk %}">Ende der Periode eintragen</a>
+
             </div>
 
         </div>
