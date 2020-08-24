@@ -23,18 +23,18 @@ def period_new(request):
         form = PeriodForm()
     return render(request, 'periodtracker/period_new.html', {'form': form})
 
-
+EditPeriodForm = modelform_factory(Period, exclude=['mood','comment','pain','starting_date'])
 
 def period_edit(request,pk):
     period = get_object_or_404(Period, pk=pk)
     if request.method == "POST":
-        form = PeriodForm(request.POST, instance=period)
+        form = EditPeriodForm(request.POST, instance=period)
         if form.is_valid():
             period = form.save(commit=False)
             period.save()
             return redirect('period_list')
     else:
-        form = PeriodForm(instance=period)
+        form = EditPeriodForm(instance=period)
     return render(request, 'periodtracker/period_edit.html', {'form': form})
 
 

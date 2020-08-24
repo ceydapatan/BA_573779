@@ -2,15 +2,23 @@
 <!DOCTYPE html>
 
 <html lang="en">
+<style>
+body {background-color: #eed2e7;}
+h2   {color: #ffffff;}
+p    {color: red;}
+form {color: #868585;}
 
+</style>
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="static/css/periodtracker.css">
     <title>Ende der Periode eintragen</title>
+    {% load static %}
 </head>
 <body>
 
 <form method="POST">
-        <h2>Ende der Periode eintragen</h2>
+         <h2 style="background-color:hsla(9, 100%, 64%, 0.5);">Ende der Periode eintragen</h2>
         <table>
             {{ form }}
         </table>
