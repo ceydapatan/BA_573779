@@ -19,9 +19,11 @@ class Period(models.Model):
     ]
 
     PAINS = [
+        ("keine", "keine"),
         ("leicht", "leicht"),
         ("regulär", "regulär"),
         ("stark", "stark"),
+
     ]
 
     mood = models.CharField(max_length=50, default='3', choices = MOODS)
