@@ -1,6 +1,6 @@
-
-<!DOCTYPE html>
-
+{% extends 'periodtracker/base.html' %}
+{% block content %}
+<!DOCTYPE html >
 <html lang="en">
 <style>
 body {background-color: #eed2e7;}
@@ -9,11 +9,13 @@ p    {color: red;}
 form {color: #868585;}
 
 </style>
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="static/css/periodtracker.css">
     <title>Ende der Periode eintragen</title>
     {% load static %}
+
 </head>
 <body>
 
@@ -27,3 +29,6 @@ form {color: #868585;}
     </form>
 </body>
 </html>
+
+{% endblock %}
+</section>
