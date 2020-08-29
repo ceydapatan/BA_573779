@@ -1,22 +1,23 @@
-from django.forms import modelform_factory
+from django.forms import modelform_factory, DateInput
 from django.shortcuts import render, redirect, get_object_or_404
+
+from .forms import PeriodForm
 from .models import Period
 from django.utils import timezone
-from .forms import PeriodForm
+
 
 
 def period_list(request):
-    periods = Period.objects.filter(starting_date__lte=timezone.now()).order_by('starting_date')
+    periods = Period.objects.order_by('starting_date')
     return render(request, 'periodtracker/period_list.html', {'periods': periods})
 
-PeriodForm = modelform_factory(Period, exclude=[])
+#PeriodForm = modelform_factory(Period, exclude=[], widgets={'starting_date': DateInput(attrs = {'type' : 'date'})})
 
 def period_new(request):
     if request.method == 'POST':
         form = PeriodForm(request.POST)
         if form.is_valid():
             period = form.save(commit=False)
-            period.starting_date = timezone.now()
             period.save()
             return redirect('period_list')
     else:
