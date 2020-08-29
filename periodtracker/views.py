@@ -1,7 +1,7 @@
 from django.forms import modelform_factory, DateInput
 from django.shortcuts import render, redirect, get_object_or_404
 
-from .forms import PeriodForm
+from .forms import PeriodForm, EditPeriodForm
 from .models import Period
 from django.utils import timezone
 
@@ -24,7 +24,7 @@ def period_new(request):
         form = PeriodForm()
     return render(request, 'periodtracker/period_new.html', {'form': form})
 
-EditPeriodForm = modelform_factory(Period, exclude=['mood','comment','pain','starting_date'])
+#EditPeriodForm = modelform_factory(Period, exclude=['mood','comment','pain','starting_date'])
 
 def period_edit(request,pk):
     period = get_object_or_404(Period, pk=pk)
