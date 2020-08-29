@@ -30,7 +30,7 @@ class Period(models.Model):
     comment=models.CharField(max_length=251, default='')
     pain = models.CharField(max_length=50, default='2', choices = PAINS)
     starting_date = models.DateField()
-    ending_date = models.DateField(null=True)
+    ending_date = models.DateField(null=True, blank=True)
 
     def __str__(self):
         return f'Period {self.id}: {self.mood} {self.pain} {self.starting_date} {self.ending_date} {self.comment}'
