@@ -8,7 +8,7 @@ from django.utils import timezone
 
 
 def period_list(request):
-    periods = Period.objects.order_by('starting_date')
+    periods = Period.objects.all()
     return render(request, 'periodtracker/period_list.html', {'periods': periods})
 
 #PeriodForm = modelform_factory(Period, exclude=[], widgets={'starting_date': DateInput(attrs = {'type' : 'date'})})
