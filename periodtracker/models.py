@@ -1,11 +1,7 @@
 from django.db import models
 
 # Create your models here.
-
-
-from django.conf import settings
 from django.db import models
-from django.utils import timezone
 
 
 class Period(models.Model):
@@ -26,11 +22,12 @@ class Period(models.Model):
 
     ]
 
-    mood = models.CharField(max_length=50, default='3', choices = MOODS)
+    mood = models.CharField(max_length=50, default='3', choices = MOODS, null=True)
     comment=models.CharField(max_length=251, default='')
-    pain = models.CharField(max_length=50, default='2', choices = PAINS)
-    starting_date = models.DateField()
-    ending_date = models.DateField(null=True, blank=True)
+    pain = models.CharField(max_length=51, default='2', choices = PAINS)
+    starting_date = models.DateField(null=True)
+    ending_date= models.DateField(null=True)
+
 
     def __str__(self):
         return f'Period {self.id}: {self.mood} {self.pain} {self.starting_date} {self.ending_date} {self.comment}'
