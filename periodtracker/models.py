@@ -26,7 +26,7 @@ class Period(models.Model):
     comment=models.CharField(max_length=251, default='',null=True)
     pain = models.CharField(max_length=51, default='2', choices = PAINS,null=True)
     starting_date = models.DateField(null=True)
-    ending_date= models.DateField(null=True,default=None)
+    ending_date= models.DateField(null=True)
 
 
     def __str__(self):
