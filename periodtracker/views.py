@@ -18,6 +18,7 @@ def period_new(request):
         form = PeriodForm(request.POST)
         if form.is_valid():
             period = form.save(commit=False)
+            period.ending_date=None
             period.save()
             return redirect('period_list')
     else:
