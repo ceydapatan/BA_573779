@@ -18,3 +18,6 @@ class EditPeriodForm(forms.ModelForm):
     class Meta:
         model = Period
         fields = ('ending_date',)
+        widgets = {
+            'ending_date': DateInput(attrs={'type': 'date'})
+        }
