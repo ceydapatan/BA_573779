@@ -8,7 +8,7 @@ class PeriodForm(forms.ModelForm):
 
     class Meta:
         model = Period
-        fields = ('starting_date', 'mood', 'pain', 'comment',)
+        fields = ('starting_date', 'mood', 'pain', 'comment','ending_date',)
         widgets = {
             'starting_date': DateInput(attrs={'type': 'date'})
         }
