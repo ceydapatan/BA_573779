@@ -2,13 +2,6 @@
 {% block content %}
 <!DOCTYPE html >
 <html lang="en">
-<style>
-body {background-color: #eed2e7;}
-h2   {color: #ffffff;}
-p    {color: red;}
-form {color: #868585;}
-
-</style>
 
 <head>
     <meta charset="UTF-8">
@@ -20,12 +13,10 @@ form {color: #868585;}
 <body>
 
 <form method="POST">
-         <h2 style="background-color:hsla(9, 100%, 64%, 0.5);">Ende der Periode eintragen</h2>
-        <table>
-            {{ form}}
-        </table>
-        <button type="submit">Save</button>
-        {% csrf_token %}
+    <h2 class="tid">Ende der Periode eintragen</h2>
+        {{ form.as_p }}
+    <button type="submit">Save</button>
+    {% csrf_token %}
     </form>
 </body>
 </html>

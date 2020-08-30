@@ -3,31 +3,28 @@
 
 
 <div>
-       <button>
-           <a href="period/new">neue Periode eintragen&#9997;</a>
-       </button>
+     <a class="btn btn-default" href="{% url 'period_new'%}">neue Periode eintragen&#9997;</a>
 </div>
 <div>
-    <span style='font-size:100px;'>&#10047;</span>
     </div>
     {% for period in periods %}
         <div class="post">
             <div class="date">
             </div>
-            <lb>{{ "Beginn der Periode"}}</lb>
+            <b><lb>{{ "Beginn der Periode"}}</lb></b>
             <p>{{ period.starting_date }}</p>
-            <lb>{{ "Stimmung"}}</lb>
+            <b><lb>{{ "Stimmung"}}</lb></b>
             <p>{{ period.mood|linebreaksbr}}</p>
-            <lb>{{ "Kommentar"}}</lb>
+            <b><lb>{{ "Kommentar"}}</lb></b>
             <p>{{ period.comment|linebreaksbr}}</p>
-            <lb>{{ "Schmerzen"}}</lb>
+            <b><lb>{{ "Schmerzen"}}</lb></b>
             <p>{{ period.pain|linebreaksbr}}</p>
-            <lb>{{ "Ende der Periode"}}</lb>
+            <b><lb>{{ "Ende der Periode"}}</lb></b>
             <p>{{ period.ending_date}}</p>
             <a class="btn btn-default" href="{% url 'period_delete' pk=period.pk %}"><span style='font-size:20px;'>&#10060;</span></a>
             <a class="btn btn-default" href="{% url 'period_edit' pk=period.pk %}">Ende der Periode eintragen&#9997;</a>
            <div>
-               <span style='font-size:100px;'>&#10047;</span>
+
            </div>
     </div>
     {% endfor %}

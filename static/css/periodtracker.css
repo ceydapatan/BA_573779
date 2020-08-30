@@ -1,6 +1,10 @@
+html{
+	background: url(../images/cute.jpg);
+
+}
 
 .page-header {
-    background-color: Violet;
+    background-color: rgba(232, 168, 188, 0.49);
     margin-top: 0;
     padding: 20px 20px 20px 40px;
 }
@@ -54,4 +58,5 @@ h1 a, h2 a {
 
 body {
     padding-left: 15px;
+    background-image: url(../images/cute.jpg);
 }

@@ -3,13 +3,7 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<style>
-body {background-color: #eed2e7;}
-h2   {color: #ffffff;}
-p    {color: red;}
-form {color: #868585;}
 
-</style>
 <head>
 
 
@@ -18,10 +12,8 @@ form {color: #868585;}
 </head>
 <body>
 <form method="POST">
-   <h2 style="background-color:hsla(9, 100%, 64%, 0.5);">New Period</h2>
-        <table>
-            {{ form }}
-        </table>
+   <h2 class="tid">New Period</h2>
+            {{ form.as_p }}
         <button type="submit">Save</button>
         {% csrf_token %}
     </form>
