@@ -17,4 +17,4 @@ class EditPeriodForm(forms.ModelForm):
 
     class Meta:
         model = Period
-        fields = ('ending_date',)
+        fields = ('comment',)
