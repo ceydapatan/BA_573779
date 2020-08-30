@@ -26,7 +26,7 @@ SECRET_KEY = '9$0blj0j27@v!3&#w_lkrjl+pijwv7(#h=f-&y017b3ym*yb2c'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','patanceyda.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1','patanceyda.pythonanywhere.com','ceydap.pythonanywhere.com']
 
 
 # Application definition
