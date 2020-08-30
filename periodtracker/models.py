@@ -23,8 +23,8 @@ class Period(models.Model):
     ]
 
     mood = models.CharField(max_length=50, default='3', choices = MOODS, null=True)
-    comment=models.CharField(max_length=251, default='')
-    pain = models.CharField(max_length=51, default='2', choices = PAINS)
+    comment=models.CharField(max_length=251, default='',null=True)
+    pain = models.CharField(max_length=51, default='2', choices = PAINS,null=True)
     starting_date = models.DateField(null=True)
     ending_date= models.DateField(null=True)
 
