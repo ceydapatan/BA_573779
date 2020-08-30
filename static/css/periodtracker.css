@@ -1,18 +1,33 @@
 html{
-	background: url(../images/cute.jpg);
+	background: url(../images/cool.jpg);
 
 }
 
+body{
+    background-image: url(../images/cool.jpg);
+}
+
+
 .page-header {
-    background-color: rgba(232, 168, 188, 0.49);
+    background-color: rgba(180, 239, 230, 0.29);
     margin-top: 0;
     padding: 20px 20px 20px 40px;
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+
     color: #cebdc5;
     font-size: 36pt;
     text-decoration: none;
+    text-shadow: 0 0 30px #003366;
+}
+.page-header h2, .page-header h2 a, .page-header h2 a:visited, .page-header h2 a:active {
+    color: #cebdc5;
+    text-shadow: 0 0 20px #003366;
+     font-family: 'Lobster', cursive;
+    font-size: 20pt;
+    text-decoration: none;
+
 }
 
 .content {
@@ -23,9 +38,6 @@ h1, h2, h3, h4 {
     font-family: 'Lobster', cursive;
 }
 
-.date {
-    color: #ad1b1b;
-}
 
 .save {
     float: right;
@@ -43,6 +55,7 @@ h1, h2, h3, h4 {
 }
 
 .post {
+    margin-top: 70px;
     margin-bottom: 70px;
 }
 
@@ -52,11 +65,30 @@ h1, h2, h3, h4 {
 
 
 h1 a, h2 a {
-    color: rgba(51, 85, 255, 0.56);
+    color: #000000;
     font-family: 'Lobster';
 }
 
 body {
     padding-left: 15px;
-    background-image: url(../images/cute.jpg);
+    margin-left: 15px;
+}
+
+lb{
+    color: #fcfcfc;
+     text-shadow: 0 0 10px #003366;
+}
+
+p {
+    color: #dc2828;
+      text-shadow: 0 0 10px #ff9df4;
+    font-family: 'Luminari', cursive;
+}
+
+.tid {
+    color: #ffffff;
+}
+
+h2{
+    color: #ffffff;
 }
