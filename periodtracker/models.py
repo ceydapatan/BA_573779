@@ -1,8 +1,8 @@
+from django.conf import settings
 from django.db import models
 
 # Create your models here.
 from django.db import models
-
 
 
 class Period(models.Model):
@@ -28,6 +28,7 @@ class Period(models.Model):
     pain = models.CharField(max_length=52, default='2', choices = PAINS,null=True)
     starting_date = models.DateField(null=True)
     ending_date = models.DateField(null=True)
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, default=None)
 
 
     def __str__(self):

@@ -24,9 +24,12 @@ p {
     </head>
     <body>
         <div class="page-header">
-        <h1><a href="/">My Period Tracker<span style='font-size:50px;'>🩸</span></a></h1>
+            {% if user.is_authenticated %}
+                <a href="{% url 'signout' %}" class="top-menu">SignOut</a>
+            {% endif %}
+            <h1><a href="/">My Period Tracker<span style='font-size:50px;'>🩸</span></a></h1>
             <h2>Keep Track Of Your Period</h2>
-    </div>
+        </div>
     <div class="content container">
         <div class="row">
             <div class="col-md-8">

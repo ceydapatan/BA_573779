@@ -8,6 +8,7 @@
 <div>
     </div>
     {% for period in periods %}
+
         <div class="post">
             <div class="date">
             </div>
@@ -24,7 +25,6 @@
             <a class="btn btn-default" href="{% url 'period_delete' pk=period.pk %}"><span style='font-size:20px;'>&#10060;</span></a>
             <a class="btn btn-default" href="{% url 'period_edit' pk=period.pk %}">Ende der Periode eintragen&#9997;</a>
            <div>
-
            </div>
     </div>
     {% endfor %}

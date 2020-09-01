@@ -10,7 +10,7 @@ from django.utils import timezone
 
 @login_required
 def period_list(request):
-    periods = Period.objects.all()
+    periods = Period.objects.filter(author=request.user).order_by('-id')
     return render(request, 'periodtracker/period_list.html', {'periods': periods})
 
 #PeriodForm = modelform_factory(Period, exclude=[], widgets={'starting_date': DateInput(attrs = {'type' : 'date'})})
@@ -21,6 +21,7 @@ def period_new(request):
         form = PeriodForm(request.POST)
         if form.is_valid():
             period = form.save(commit=False)
+            period.author = request.user
             period.save()
             return redirect('period_list')
     else:
