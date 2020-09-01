@@ -1,6 +1,5 @@
 {% extends 'periodtracker/base.html' %}
 {% block content %}
-<!DOCTYPE html >
 <html lang="en">
 
 <head>
@@ -10,8 +9,8 @@
     {% load static %}
 
 </head>
-<body>
 
+<body>
 <form method="POST">
     <h2 class="tid">Ende der Periode eintragen</h2>
         {{ form.as_p }}
@@ -19,6 +18,7 @@
     {% csrf_token %}
     </form>
 </body>
+
 </html>
 
 {% endblock %}

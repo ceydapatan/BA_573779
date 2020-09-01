@@ -7,13 +7,7 @@ p {
   padding: 15px;
     margin: 5px;
 }
-
-
-
-
 </style>
-
-
     <head>
         <title>My Period Tracker</title>
 <link rel="stylesheet" href="{% static 'css/periodtracker.css' %}">
@@ -23,9 +17,16 @@ p {
 
     </head>
     <body>
-        <div class="page-header">
+        <div class="page-header" style="color: #cebdc5;
+    font-size: 36pt;
+    text-decoration: none;
+    text-shadow: 0 0 30px #003366;
+    font-family: 'Lobster', cursive;">
             {% if user.is_authenticated %}
-                <a href="{% url 'signout' %}" class="top-menu">SignOut</a>
+                <ul class="top-menu" style="list-style-type: none;">
+                    <li style="color: rgba(225, 227, 239, 0.9);">Hello {{ request.user }}</li>
+                    <li><a href="{% url 'signout' %}" class="top-menu">SignOut</a></li>
+                </ul>
             {% endif %}
             <h1><a href="/">My Period Tracker<span style='font-size:50px;'>🩸</span></a></h1>
             <h2>Keep Track Of Your Period</h2>

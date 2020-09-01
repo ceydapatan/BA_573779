@@ -1,12 +1,13 @@
 {% extends 'periodtracker/base.html' %}
 {% block content %}
+<div style="color: #ffffff; text-shadow: 0 0 10px #ff9df4; font-size: 10pt; font-family: 'Lobster', cursive;">
 <h2>Login</h2>
     <form method="POST" class="login-form"> {% csrf_token %}
         {{ form.as_p }}
         <button type="submit" class="save btn btn-default">Save</button>
     </form>
 
-    <div class="flex-col-c p-t-20">
+    <div class="flex-col-c p-t-20" style="font-size: 15;">
 					<span class="txt1 p-b-17">
 						Or Sign Up Using
 					</span>
@@ -14,5 +15,6 @@
 					<a href="signup/" class="txt2">
 						Sign Up
 					</a>
-				</div>
+	</div>
+</div>
 {% endblock %}
