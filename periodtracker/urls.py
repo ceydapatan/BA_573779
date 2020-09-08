@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, include
 
 from user.views import signout
 from . import views
@@ -9,4 +9,5 @@ urlpatterns = [
     path('period/<int:pk>/edit/', views.period_edit, name='period_edit'),
     path('period/<int:pk>/delete/', views.period_delete, name='period_delete'),
     path('logout/', signout, name='signout'),
+    path('cal/', include('cal.urls')),
 ]

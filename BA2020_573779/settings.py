@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'periodtracker',
     'user.apps.UserConfig',
+    'cal.apps.CalConfig',
 ]
 
 MIDDLEWARE = [
