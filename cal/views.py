@@ -8,9 +8,10 @@ from django.views import generic
 from django.utils.safestring import mark_safe
 from .models import *
 from .utils import Calendar
+from periodtracker.models import Period
 
 class CalendarView(generic.ListView):
-    model = Event
+    model = Period
     template_name = 'cal/calendar.html'
 
     def get_context_data(self, **kwargs):

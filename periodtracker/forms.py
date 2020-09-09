@@ -6,10 +6,13 @@ from .models import Period
 class PeriodForm(forms.ModelForm):
     class Meta:
         model = Period
-        fields = ('starting_date', 'mood', 'pain', 'comment',)
+        fields = ('start_time', 'mood', 'pain', 'comment',)
         widgets = {
-            'starting_date': forms.DateInput(attrs={'type': 'date'}),
+            'start_time': forms.DateInput(attrs={'type': 'date'}),
             'mood': forms.Select(attrs={'class':'form-control'}),
+            #'start_time': DateInput(attrs={'type': 'datetime-local'}, format='%Y-%m-%dT%H:%M'),
+
+
             'pain': forms.Select(attrs={'class': 'form-control'}),
             'comment': forms.Textarea(attrs={'class':'form-control'}),
         }
@@ -20,8 +23,8 @@ class EditPeriodForm(forms.ModelForm):
 
     class Meta:
         model = Period
-        fields = ('ending_date',)
+        fields = ('end_time',)
         widgets = {
-            'ending_date': forms.DateInput(attrs={'type': 'date','placeholder':'noch nicht bekannt'}),
+            'end_time': forms.DateInput(attrs={'type': 'date', 'placeholder': 'noch nicht bekannt'}),
         }
 
