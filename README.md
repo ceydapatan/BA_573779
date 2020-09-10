@@ -16,7 +16,7 @@ Ebenso, können sie alle Einträge löschen. Über die Startseite können sie au
 
 ## Technologien
 ***
-A list of technologies used within the project:
+Eine Liste der Technologien, die für dieses Projekt verwendet wurden:
 * [PyCharm]: Version 2020.2.1
 * [Python]: Version 3.8
 * [Bootstrap]: Version 3.2.0
