@@ -22,10 +22,10 @@ class Calendar(HTMLCalendar):
 		end_per_day = periods.filter( end_time__year=self.year, end_time__month=self.month, end_time__day=day)
 		d = ''
 		for period in periods_per_day:
-			d += f'<li> {"🩸"} </li>'
+			d += f'<p style="font-size:12px">{"🩸"}</p>'
 
 		for period in end_per_day:
-			d += f'<li> {"🌸"} </li>'
+			d = f'<p style="font-size:12px">{"🌸"}</p>'
 
 		if day != 0:
 			return f"<td><span class='date'>{day}</span><ul> {d} </ul></td>"

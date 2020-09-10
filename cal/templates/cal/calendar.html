@@ -1,27 +1,34 @@
-{% extends 'periodtracker/base.html' %}
+{% extends 'cal/base.html' %}
 {% block content %}
+    <center>
+     <br/><legend><strong><lb>{{ " 🩸 = Start der Periode"}}</lb></strong><br/>
+
+
+
+
+
+    <strong><lb>{{ " 🌸 = Ende der Periode"}}</lb></strong></legend>
+
+        <br/>
+
 <div class="clearfix">
+
 	<a class="btn btn-info left" href="{% url 'cal:calendar' %}?{{ prev_month }}"> Previous Month </a>
 	<a class="btn btn-info right" href="{% url 'cal:calendar' %}?{{ next_month }}"> Next Month </a>
 </div>
-
+        <br/>
+<div>
 {{ calendar }}
 
 
-
-
-<div>
-  <b><lb>{{ " 🩸 = Start der Periode"}}</lb></b>
-
-
-     </div>
-    <div>
+</div>
 
 
 
 
-    <b><lb>{{ " 🌸 = Ende der Periode"}}</lb></b>
 
 
-    </div>
+<br/><br/>
+
+</center>
 {% endblock %}
