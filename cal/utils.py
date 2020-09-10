@@ -2,7 +2,7 @@ from datetime import datetime, timedelta
 from calendar import HTMLCalendar
 
 
-import day as day
+
 
 from periodtracker.models import Period
 
