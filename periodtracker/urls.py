@@ -3,6 +3,7 @@ from django.urls import path, include
 from user.views import signout
 from . import views
 
+
 urlpatterns = [
     path('', views.period_list, name='period_list'),
     path('period/new', views.period_new, name='period_new'),
